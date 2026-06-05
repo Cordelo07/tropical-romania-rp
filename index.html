@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulament – Tropical România RolePlay</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1a1008;
+    --card: #2a1c0a;
+    --border: #3d2a10;
+    --orange: #e8853a;
+    --gold: #f5c842;
+    --teal: #3a9a8a;
+    --cream: #f0e6c8;
+    --text: #d4c4a0;
+    --muted: #7a6040;
+    --red: #d45030;
+    --red-bg: #2e1208;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  body::before {
+    content:'';
+    position:fixed; inset:0;
+    background:
+      radial-gradient(ellipse 70% 40% at 50% 0%, rgba(232,133,58,0.10) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 30% at 10% 100%, rgba(58,154,138,0.07) 0%, transparent 50%);
+    pointer-events:none; z-index:0;
+  }
+
+  .page {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+    position: relative; z-index:1;
+  }
+
+  /* HEADER */
+  .header { text-align:center; margin-bottom:36px; }
+  h1 {
+    font-family:'Bebas Neue',sans-serif;
+    font-size: clamp(2.4rem,7vw,3.4rem);
+    letter-spacing:6px; color:var(--cream); line-height:1;
+  }
+  h1 em { font-style:normal; color:var(--orange); }
+  .header-sub {
+    font-size:0.7rem; letter-spacing:3px;
+    color:var(--muted); text-transform:uppercase; margin-top:8px;
+  }
+  .divider {
+    width:100%; height:1px;
+    background:linear-gradient(90deg,transparent,var(--border),transparent);
+    margin:20px 0 0;
+  }
+
+  /* NAV */
+  .nav {
+    display:flex; gap:8px; flex-wrap:wrap;
+    justify-content:center; margin-bottom:32px;
+  }
+  .nav a {
+    padding:7px 18px; border-radius:4px;
+    font-size:0.72rem; font-weight:600; letter-spacing:2px;
+    text-transform:uppercase; text-decoration:none;
+    border:1px solid var(--border); background:var(--card);
+    color:var(--muted); transition:all 0.2s;
+  }
+  .nav a:hover { border-color:var(--orange); color:var(--orange); background:rgba(232,133,58,0.07); }
+
+  /* SECTION */
+  .section { margin-bottom:32px; }
+  .sec-head {
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:12px; padding:10px 16px;
+    background:var(--card); border:1px solid var(--border);
+    border-left:3px solid var(--orange); border-radius:6px;
+  }
+  .sec-icon { font-size:1rem; }
+  .sec-label { font-size:0.58rem; letter-spacing:3px; color:var(--muted); text-transform:uppercase; }
+  .sec-title { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:2px; color:var(--cream); }
+
+  /* RULES */
+  .rule {
+    display:flex; gap:12px; align-items:flex-start;
+    padding:8px 12px; border-radius:5px;
+    border-left:2px solid transparent; margin-bottom:3px;
+    transition:background 0.15s, border-color 0.15s;
+  }
+  .rule:hover { background:rgba(255,255,255,0.03); border-left-color:var(--teal); }
+  .rule.w { border-left-color:var(--red); background:rgba(46,18,8,0.8); }
+  .rule.w:hover { background:rgba(212,80,48,0.1); }
+
+  .rn {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:0.9rem; color:var(--muted);
+    min-width:26px; padding-top:2px;
+  }
+  .rb { flex:1; }
+  .rk {
+    font-size:0.62rem; font-weight:600;
+    letter-spacing:2px; text-transform:uppercase;
+    color:var(--gold); margin-bottom:2px;
+  }
+  .rt { font-size:0.88rem; color:var(--text); }
+  .rt strong { font-weight:600; color:var(--cream); }
+
+  /* FOOTER */
+  .footer {
+    margin-top:40px; padding:18px;
+    border:1px solid var(--border); border-radius:8px;
+    text-align:center; background:var(--card);
+  }
+  .footer-name {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:1.2rem; letter-spacing:4px; color:var(--orange);
+  }
+  .footer-sub { font-size:0.65rem; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-top:4px; }
+
+  /* Mobile */
+  @media(max-width:480px){
+    .page{ padding:24px 14px 40px; }
+    .sec-head{ padding:8px 12px; }
+    .rule{ padding:7px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <h1>REGULA<em>MENT</em></h1>
+    <div class="header-sub">Tropical România RolePlay · PlayStation · GTA Online · Discord</div>
+    <div class="divider"></div>
+  </div>
+
+  <nav class="nav">
+    <a href="#ooc">💬 OOC</a>
+    <a href="#rp">🎭 RolePlay</a>
+    <a href="#ilegale">🔫 Ilegalități</a>
+  </nav>
+
+  <!-- OOC -->
+  <div class="section" id="ooc">
+    <div class="sec-head">
+      <span class="sec-icon">💬</span>
+      <div><div class="sec-label">Secțiunea 1</div><div class="sec-title">Regulament OOC</div></div>
+    </div>
+    <div class="rule"><span class="rn">01</span><div class="rb"><div class="rt">Limbajul vulgar este permis, dar bunul simț nu trebuie să dispară.</div></div></div>
+    <div class="rule w"><span class="rn">02</span><div class="rb"><div class="rk">⛔ Interzis absolut</div><div class="rt">Niciun tip de pornografie, asalt asupra minorilor, rasism, sexism sau injurii la adresa altor culturi.</div></div></div>
+    <div class="rule"><span class="rn">03</span><div class="rb"><div class="rt">Fiți respectuoși și evitați subiectele care pot genera conflicte directe sau indirecte.</div></div></div>
+    <div class="rule"><span class="rn">04</span><div class="rb"><div class="rt">Nu trimiteți mesaje spam pe canale sau tickete.</div></div></div>
+    <div class="rule w"><span class="rn">05</span><div class="rb"><div class="rk">⛔ Promovare</div><div class="rt">Nu faceți promovări nici pe server, nici în privat membrilor comunității.</div></div></div>
+    <div class="rule"><span class="rn">06</span><div class="rb"><div class="rt">Nu puneți întrebări al căror răspuns se află în regulament echipei de asistență.</div></div></div>
+    <div class="rule"><span class="rn">07</span><div class="rb"><div class="rk">⏱ Timp de răspuns</div><div class="rt">Dacă vi se solicită prezența pe suport, sunteți obligați să vă prezentați în maxim <strong>48 de ore</strong>.</div></div></div>
+    <div class="rule w"><span class="rn">08</span><div class="rb"><div class="rt">Nu adăugați alți membri pe grupul de PlayStation fără aprobare.</div></div></div>
+    <div class="rule w"><span class="rn">09</span><div class="rb"><div class="rt">Interzis să trimiteți insulte care vizează comunitatea sau membrii ei.</div></div></div>
+    <div class="rule w"><span class="rn">10</span><div class="rb"><div class="rt">Interzis să schimbați numele grupului de PlayStation sau imaginea acestuia.</div></div></div>
+    <div class="rule"><span class="rn">11</span><div class="rb"><div class="rt">Sunteți obligați să raportați orice problemă observată în timpul sesiunii de RolePlay.</div></div></div>
+    <div class="rule"><span class="rn">12</span><div class="rb"><div class="rt">Nu puneți melodii sau sunete de la telefon la volum ridicat pe gașcă.</div></div></div>
+    <div class="rule"><span class="rn">13</span><div class="rb"><div class="rt">Interzis să strigați în microfon în timpul sesiunilor.</div></div></div>
+    <div class="rule"><span class="rn">14</span><div class="rb"><div class="rt">Nu deranjați jucătorii aflați în desfășurarea unui RolePlay activ.</div></div></div>
+    <div class="rule w"><span class="rn">15</span><div class="rb"><div class="rk">🔒 Date confidențiale</div><div class="rt">Interzis să oferiți date personale sau fotografii cu persoane pe gașcă, PS sau Discord.</div></div></div>
+    <div class="rule w"><span class="rn">16</span><div class="rb"><div class="rk">⛔ Bug Abuse</div><div class="rt">Strict interzis să abuzați de bug-uri din GTA Online sau din Tropical Bot.</div></div></div>
+  </div>
+
+  <!-- ROLEPLAY -->
+  <div class="section" id="rp">
+    <div class="sec-head">
+      <span class="sec-icon">🎭</span>
+      <div><div class="sec-label">Secțiunea 2</div><div class="sec-title">Regulament RolePlay</div></div>
+    </div>
+    <div class="rule w"><span class="rn">01</span><div class="rb"><div class="rk">Power-Gaming</div><div class="rt">RP care depășește abilitățile fizice normale ale unei persoane.</div></div></div>
+    <div class="rule w"><span class="rn">02</span><div class="rb"><div class="rk">Meta-Gaming</div><div class="rt">Folosirea informațiilor OOC în scopuri IC.</div></div></div>
+    <div class="rule w"><span class="rn">03</span><div class="rb"><div class="rk">Mixing</div><div class="rt">Transferul de informații între IC și OOC în orice direcție.</div></div></div>
+    <div class="rule w"><span class="rn">04</span><div class="rb"><div class="rk">Death-Match</div><div class="rt">Act de violență fără nicio justificare RP validă.</div></div></div>
+    <div class="rule w"><span class="rn">05</span><div class="rb"><div class="rk">No-Fear</div><div class="rt">Lipsa de frică în situații în care orice persoană normală ar fi speriată.</div></div></div>
+    <div class="rule w"><span class="rn">06</span><div class="rb"><div class="rk">Cop-Fear</div><div class="rt">Ignorarea autorității poliției fără un motiv RP valid.</div></div></div>
+    <div class="rule w"><span class="rn">07</span><div class="rb"><div class="rk">Chicken-Run</div><div class="rt">Alergare în zig-zag pentru a evita gloanțele. Interzis.</div></div></div>
+    <div class="rule w"><span class="rn">08</span><div class="rb"><div class="rk">Bunny-Hop</div><div class="rt">Sărituri repetate pentru a evita gloanțele. Interzis.</div></div></div>
+    <div class="rule"><span class="rn">09</span><div class="rb"><div class="rk">Player-Kill</div><div class="rt">Rămâi <strong>15 minute</strong> la locul comei, după care pierzi informațiile acțiunii RP precedente.</div></div></div>
+    <div class="rule w"><span class="rn">10</span><div class="rb"><div class="rk">Revenge-Kill</div><div class="rt">Revenirea cu alt caracter pentru a te răzbuna pe cel care te-a ucis. Interzis.</div></div></div>
+    <div class="rule w"><span class="rn">11</span><div class="rb"><div class="rk">Character-Kill</div><div class="rt">Moarte permanentă — pierzi tot. Se aplică exclusiv în cazuri avansate de RP.</div></div></div>
+    <div class="rule w"><span class="rn">12</span><div class="rb"><div class="rk">Drop and Kill</div><div class="rt">A forța pe cineva să arunce itemele și a-l ucide ulterior. Interzis.</div></div></div>
+    <div class="rule w"><span class="rn">13</span><div class="rb"><div class="rk">Rob and Kill</div><div class="rt">A jefui și a ucide imediat după. Interzis.</div></div></div>
+    <div class="rule w"><span class="rn">14</span><div class="rb"><div class="rk">Pit-Stop</div><div class="rt">Frânare bruscă la viteză mare pentru a provoca accident cu mașina din spate. Interzis.</div></div></div>
+    <div class="rule w"><span class="rn">15</span><div class="rb"><div class="rk">Release From Prison</div><div class="rt">Părăsirea închisorii fără finalizarea sentinței. Strict interzis.</div></div></div>
+    <div class="rule w"><span class="rn">16</span><div class="rb"><div class="rk">Post-Hunt</div><div class="rt">Urmărirea unui jucător doar pentru a-i verifica acțiunile. Interzis.</div></div></div>
+    <div class="rule w"><span class="rn">17</span><div class="rb"><div class="rk">Refuse RolePlay</div><div class="rt">Refuzul de a participa la acțiunile RP. Toți jucătorii sunt obligați să joace.</div></div></div>
+    <div class="rule"><span class="rn">18</span><div class="rb"><div class="rt">Interzis să conduceți mașini ale NPC-urilor.</div></div></div>
+    <div class="rule"><span class="rn">19</span><div class="rb"><div class="rt">Nu puteți conduce cu 2 sau mai multe roți sparte.</div></div></div>
+    <div class="rule"><span class="rn">20</span><div class="rb"><div class="rt">Interzis să trageți de la volan.</div></div></div>
+    <div class="rule"><span class="rn">21</span><div class="rb"><div class="rt">Nu verificați inventarul sau balanța altei persoane fără a fi lângă ea și fără acordul ei.</div></div></div>
+    <div class="rule w"><span class="rn">22</span><div class="rb"><div class="rk">⛔ Multi-Cont</div><div class="rt">Strict interzis să dețineți mai multe caractere pe server.</div></div></div>
+    <div class="rule"><span class="rn">23</span><div class="rb"><div class="rt">Respectați structura fiecărui job disponibil pe server.</div></div></div>
+    <div class="rule"><span class="rn">24</span><div class="rb"><div class="rt">Nu schimbați vehiculele/bărcile/elicopterele după o urmărire sau acțiune RP complicată.</div></div></div>
+    <div class="rule"><span class="rn">25</span><div class="rb"><div class="rt">Interzis să vă ascundeți în clădirile deținute pe GTA Online.</div></div></div>
+    <div class="rule"><span class="rn">26</span><div class="rb"><div class="rt">Nu folosiți iteme din GTA Online dacă nu sunt aprobate pe server.</div></div></div>
+    <div class="rule"><span class="rn">27</span><div class="rb"><div class="rt">Verificați dacă itemul există pe server și achiziționați-l prin mijloace RP înainte de a-l folosi.</div></div></div>
+    <div class="rule"><span class="rn">28</span><div class="rb"><div class="rt">Nu vă schimbați aspectul personajului (ochi, buze, tatuaje) după creare.</div></div></div>
+    <div class="rule w"><span class="rn">29</span><div class="rb"><div class="rk">⛔ Mod-uri</div><div class="rt">Nu aveți permisiunea de a deține sau folosi lucruri modate.</div></div></div>
+    <div class="rule"><span class="rn">30</span><div class="rb"><div class="rt">Puneți pe mute persoanele din gașcă care nu se află în acțiunea voastră RP.</div></div></div>
+  </div>
+
+  <!-- ILEGALITĂȚI -->
+  <div class="section" id="ilegale">
+    <div class="sec-head">
+      <span class="sec-icon">🔫</span>
+      <div><div class="sec-label">Secțiunea 3</div><div class="sec-title">Regulament Ilegalități</div></div>
+    </div>
+    <div class="rule w"><span class="rn">01</span><div class="rb"><div class="rt">Nu jefuiți în locuri publice (parcări, autostrăzi, clădiri).</div></div></div>
+    <div class="rule w"><span class="rn">02</span><div class="rb"><div class="rk">🕗 Program jafuri</div><div class="rt">Jafurile sunt interzise între orele <strong>08:00 – 20:00 IC</strong>.</div></div></div>
+    <div class="rule"><span class="rn">03</span><div class="rb"><div class="rt">Interzis să jefuiți aceeași persoană la mai puțin de <strong>24 de ore</strong> distanță.</div></div></div>
+    <div class="rule"><span class="rn">04</span><div class="rb"><div class="rt">Nu staționați în fața băncii cu autovehicul sau elicopter.</div></div></div>
+    <div class="rule"><span class="rn">05</span><div class="rb"><div class="rk">💰 Ostatic</div><div class="rt">Suma maximă cerută pe ostatic: <strong>50.000 RON</strong>.</div></div></div>
+    <div class="rule"><span class="rn">06</span><div class="rb"><div class="rk">👤 Ostatici</div><div class="rt">Puteți lua maxim <strong>2 ostatici</strong> în timpul unui jaf.</div></div></div>
+    <div class="rule"><span class="rn">07</span><div class="rb"><div class="rk">⏱ Cronometru jaf</div><div class="rt">Odată pornit jaful, poliția are <strong>15 minute</strong> să-și facă prezența.</div></div></div>
+    <div class="rule"><span class="rn">08</span><div class="rb"><div class="rt">Dacă jefuitorii nu deschid focul, poliția nu intră în bancă și nu trage.</div></div></div>
+    <div class="rule w"><span class="rn">09</span><div class="rb"><div class="rk">👔 Mafioți & Joburi gov.</div><div class="rt">Pentru rolul de mafiot trebuie să-ți dai demisia de la orice job guvernamental.</div></div></div>
+    <div class="rule"><span class="rn">10</span><div class="rb"><div class="rt">Mafioții pot activa exclusiv în grupuri oficiale ale organizației proprii.</div></div></div>
+    <div class="rule w"><span class="rn">11</span><div class="rb"><div class="rt">Strict interzis ca mafioții să ignore semnalele poliției, mai ales fără nimic ilegal în inventar.</div></div></div>
+    <div class="rule"><span class="rn">12</span><div class="rb"><div class="rt">Itemele ilegale se ascund exclusiv în clădirile organizației din care faceți parte.</div></div></div>
+    <div class="rule"><span class="rn">13</span><div class="rb"><div class="rk">👥 Membri</div><div class="rt">O organizație poate deține maxim <strong>7 membri</strong> fără lider.</div></div></div>
+    <div class="rule w"><span class="rn">14</span><div class="rb"><div class="rk">⛔ Alianțe</div><div class="rt">Orice formă de alianță între organizații este strict interzisă.</div></div></div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-name">🌴 Tropical România RolePlay</div>
+    <div class="footer-sub">Regulament Oficial · PlayStation · Tropical.Oficial</div>
+  </div>
+
+</div>
+</body>
+</html>
